@@ -31,5 +31,19 @@ def get_character_count(text):
     return char_count
     
  
-        
+def sort_dictionary(dictionary):
+
+    def sort_on(dict):
+        return dict['count']
+    
+    dict_list = []
+
+    for key, value in dictionary.items():
+        dict_list.append({'char': key, 'count': value})
+
+
+    dict_list.sort(reverse=True, key=sort_on)
+
+    return dict_list
+
 
